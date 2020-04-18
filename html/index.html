@@ -73,23 +73,16 @@
 </head>
 <body>
     <div class="all">
-        <form action="/Obr" method="post" enctype="multipart/form-data">
-            <div class="upButton ">
-                <input type="file" accept="csv" name="filename" id="">
-                <p class="TextInBtUp">Выбрать CSV файл</p>
-            </div>
-            <div class="dnButton">
-                <button type="submit" class="SubmitButton"></button>
-                <p class="TextInBtDn">Обработать всех</p>
-            </div>
-        </form>
-        <br><br>
         <form action="/ObrFIO" method="post" enctype="multipart/form-data">
             <div class="upButton ">
-                <input type="file" accept="csv" name="filename" id="">
+                <input type="file" accept="csv" name="file" id="">
                 <p class="TextInBtUp">Выбрать CSV файл</p>
             </div>
             <input type="text" name="username" class="inputFIO" id="" placeholder="Введите фамилию">
+            <select name="target_encoding" id="" class="inputFIO">
+                <option value="1251">1251</option>
+                <option value="utf-8">UTF-8</option>
+            </select>
             <div class="dnButton">
                 <button type="submit" class="SubmitButton"></button>
                 <p class="TextInBtDn">Обработать одного</p>
