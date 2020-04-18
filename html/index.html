@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSVReader</title>
+    <style>
+        body{
+            background-color: #c8c8c8;
+        }
+        .upButton, .dnButton, .inputFIO{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px;
+        }
+        .upButton:active, .dnButton:active{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px inset;
+        }
+        .all{
+            transform: translate(-50%, -50%);
+            position: absolute; 
+            top: 50%; 
+            left: 50%;
+        }
+        .upButton{
+            width: 300px;
+            height: 50px;
+            background-color: #fff;
+        }
+        .upButton input{
+            opacity: 0;
+            width: 300px;
+            height: 50px;
+        }
+        .dnButton{
+            width: 210px;
+            height: 30px;
+            margin-top: 10px;
+            background-color: #fff;
+        }
+        .dnButton button{
+            width: 210px;
+            height: 30px;
+            opacity: 0;
+        }
+        .TextInBtUp{
+            text-align: center;
+            margin-top: -36px;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .TextInBtDn{
+            text-align: center;
+            margin-top: -26px;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .inputFIO{
+            width: 300px;
+            height: 25px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <form action="/Obr" method="post" enctype="multipart/form-data">
+            <div class="upButton ">
+                <input type="file" accept="csv" name="filename" id="">
+                <p class="TextInBtUp">Выбрать CSV файл</p>
+            </div>
+            <div class="dnButton">
+                <button type="submit" class="SubmitButton"></button>
+                <p class="TextInBtDn">Обработать всех</p>
+            </div>
+        </form>
+        <br><br>
+        <form action="/ObrFIO" method="post" enctype="multipart/form-data">
+            <div class="upButton ">
+                <input type="file" accept="csv" name="filename" id="">
+                <p class="TextInBtUp">Выбрать CSV файл</p>
+            </div>
+            <input type="text" name="username" class="inputFIO" id="" placeholder="Введите фамилию">
+            <div class="dnButton">
+                <button type="submit" class="SubmitButton"></button>
+                <p class="TextInBtDn">Обработать одного</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
