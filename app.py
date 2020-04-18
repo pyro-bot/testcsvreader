@@ -24,9 +24,9 @@ class HelloWorld(object):
         return tmpl.render(data=data_to_show)
         
     def parse_row(self, row):
-        date, filename = row[:2]
+        date, name = row[:2]
         date = datetime.strptime(date, '%d/%m/%y, %H:%M')
-        return f'{filename} {date.strftime("%d.%m.%y")}', (filename, date)
+        return f'{name} {date.strftime("%d.%m.%y")}', (name.strip(), date)
 
     @cherrypy.expose
     def ObrFIO(self, file, username=None, target_encoding='1251'):
